@@ -1,0 +1,68 @@
+/* Sidebar Styles */
+.sidebar {
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, #ffffff, #00d9ff); /* Gradient background */
+    overflow-y: auto;
+    transition: 0.3s; /* Add a smooth transition effect */
+    display: block; /* Show the sidebar by default */
+}
+
+.sidebar a {
+    display: block;
+    padding: 16px;
+    text-decoration: none;
+    color: black;
+}
+
+/* .sidebar a.active {
+    background-color: #04AA6D;
+    color: white;
+} */
+
+.sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+/* Content Styles */
+.content {
+    margin-left: 200px;
+    padding: 20px; /* Increase padding for better spacing */
+    width: calc(100% - 200px); /* Subtract the sidebar width from the content width */
+}
+
+/* Navigation Bar Styles */
+nav {
+    position: fixed;
+    width: 100%;
+    background-color: #333;
+    z-index: 100; /* Ensure the navigation bar is on top of other content */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 700px) {
+    .sidebar {
+        width: 0; /* Hide the sidebar by setting its width to 0 */
+        transition: 0.3s; /* Add a smooth transition effect */
+    }
+    
+    .content {
+        margin-left: 0;
+        padding: 20px; /* Adjust padding as needed */
+        width: 100%; /* Make content full width on small screens */
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sidebar a {
+        text-align: center;
+        padding: 10px; /* Adjust padding as needed */
+    }
+}
+#mypic{
+    margin-bottom: 20px;
+}
